@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Shield, ShieldAlert, Activity, Settings2, Trash2, Clock, Terminal, Check, X, Command, EyeOff, Play, Users, MessageSquare, TrendingUp, ThumbsUp, Radio, Crown, AlertTriangle, Cat } from 'lucide-react';
 import './index.css';
 
-const SOCKET_URL = 'http://localhost:3001';
+const SOCKET_URL = "https://your-app.onrender.com";
 
 export default function App() {
   const [messages, setMessages] = useState([]);

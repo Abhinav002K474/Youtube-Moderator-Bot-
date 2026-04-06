@@ -14,7 +14,10 @@ const io = new Server(server, {
   }
 });
 
-app.use(cors());
+app.use(cors({
+  origin: "https://frontend-luzpmaxfk-abhinavs-projects-0ca041d3.vercel.app",
+  credentials: true
+}));
 app.use(express.json());
 
 // In-memory state
