@@ -113,16 +113,22 @@ function checkSpam(messageDetails) {
 // ---------------------------
 app.post('/api/live/start', async (req, res) => {
   if (!youtubeTokens) return res.status(401).json({ error: 'Not authenticated with YouTube' });
+  const { targetChannelId } = req.body;
   
   if (!isPolling) {
     isPolling = true;
     try {
       const youtube = google.youtube({ version: 'v3', auth: oauth2Client });
-      const channelRes = await youtube.channels.list({ part: 'id', mine: true });
-      if (!channelRes.data.items || channelRes.data.items.length === 0) {
-        throw new Error('No YouTube channel found for this auth account.');
+      
+      if (targetChannelId) {
+        activeChannelId = targetChannelId;
+      } else {
+        const channelRes = await youtube.channels.list({ part: 'id', mine: true });
+        if (!channelRes.data.items || channelRes.data.items.length === 0) {
+          throw new Error('No YouTube channel found for this auth account.');
+        }
+        activeChannelId = channelRes.data.items[0].id;
       }
-      activeChannelId = channelRes.data.items[0].id;
       
       await initializeStreamData();
       pollChat();

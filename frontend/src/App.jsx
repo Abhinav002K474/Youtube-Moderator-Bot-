@@ -13,6 +13,7 @@ export default function App() {
   const [isConnected, setIsConnected] = useState(false);
   const [isAuth, setIsAuth] = useState(false);
   const [newWord, setNewWord] = useState('');
+  const [targetChannelId, setTargetChannelId] = useState('');
   const [analytics, setAnalytics] = useState({
     isLive: false, viewers: 0, likes: 0, subs: 0, messages: 0, uniqueUsers: 0, newUsers: 0, subGrowth: 0
   });
@@ -94,7 +95,7 @@ export default function App() {
 
   const startPolling = async () => {
     try {
-      await axios.post(`${SOCKET_URL}/api/live/start`);
+      await axios.post(`${SOCKET_URL}/api/live/start`, { targetChannelId });
     } catch (err) {
       alert("Failed to start stream: " + (err.response?.data?.error || err.message));
     }
@@ -153,6 +154,15 @@ export default function App() {
             <>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--success)', marginBottom: '12px' }}>
                 <Check size={18} /> <strong>YouTube Connected</strong>
+              </div>
+              <div style={{ marginBottom: '12px' }}>
+                <input 
+                  type="text" 
+                  placeholder="Target Channel ID (UC...)" 
+                  value={targetChannelId} 
+                  onChange={(e) => setTargetChannelId(e.target.value)}
+                  style={{ width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid var(--border)', background: 'rgba(0,0,0,0.5)', color: 'white' }}
+                />
               </div>
               <button 
                 onClick={startPolling}
