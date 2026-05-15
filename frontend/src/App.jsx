@@ -130,7 +130,7 @@ export default function App() {
             <Shield className="glow-icon-danger" size={34} style={{ fill: '#dc2626', color: '#dc2626', position: 'absolute' }} />
             <Cat size={20} color="#050505" style={{ fill: '#050505', position: 'absolute', zIndex: 1, marginTop: '2px' }} />
           </div>
-          <span style={{ fontWeight: 800, fontSize: '1.5rem', letterSpacing: '1px' }}>BLACK CAT PINIX</span>
+          <span style={{ fontWeight: 800, fontSize: '1.5rem', letterSpacing: '1px' }}>BLACK CAT</span>
         </div>
         
         {/* Connection Auth Card */}

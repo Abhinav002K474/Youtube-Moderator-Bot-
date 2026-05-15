@@ -1,11 +1,14 @@
-# 🛡️ Black-cat-pinix - YouTube Moderator Bot
+# 🛡️ YouTube Moderator Bot
 
 A powerful, real-time AI-driven moderation dashboard for YouTube Live Streams. This tool helps creators manage their community by automatically detecting spam, blocking malicious links, and providing a sleek interface for manual moderation and live analytics.
 
 ![YouTube Moderator Bot](https://img.shields.io/badge/YouTube-Moderator-red?style=for-the-badge&logo=youtube)
+![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
+
+**Live Link:** [https://Black-cat-pinix.vercel.app](https://Black-cat-pinix.vercel.app)
 
 ---
 
