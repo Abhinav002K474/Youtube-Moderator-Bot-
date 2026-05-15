@@ -15,7 +15,7 @@ const io = new Server(server, {
 });
 
 app.use(cors({
-  origin: "https://black-cat-pinix.vercel.app",
+  origin: "https://Black-cat-pinix.vercel.app",
   credentials: true
 }));
 app.use(express.json());
