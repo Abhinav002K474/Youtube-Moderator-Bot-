@@ -1,4 +1,4 @@
-# 🛡️ YouTube Moderator Bot
+# 🛡️ Black-cat-pinix - YouTube Moderator Bot
 
 A powerful, real-time AI-driven moderation dashboard for YouTube Live Streams. This tool helps creators manage their community by automatically detecting spam, blocking malicious links, and providing a sleek interface for manual moderation and live analytics.
 
